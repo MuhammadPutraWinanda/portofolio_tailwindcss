@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portofolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- My Own JS -->
+    <script defer src="main.js"></script>
+  </head>
+  <body class="font-[Inter] dark:bg-slate-900">
+    <header
+      class="bg-white py-0.5 md:px-10 lg:px-43 sticky top-0 z-10 dark:bg-slate-900"
+    >
+      <div
+        class="container flex justify-between py-3 px-4 min-w-full md:px-0 md:items-center"
+      >
+        <div class="logo">
+          <h1 class="text-lg text-sky-500 font-semibold md:text-xl lg:text-xl">
+            Nanda Winanda
+          </h1>
+        </div>
+
+        <nav
+          class="hidden md:dekstop-menu md:flex md:items-center md:text-sm md:gap-8 md:text-slate-700"
+        >
+          <a href="#" class="nav-list-dekstop">Beranda</a>
+          <a href="#aboutUs" class="nav-list-dekstop">Tentang Saya</a>
+          <a href="#myProject" class="nav-list-dekstop">Portofolio</a>
+          <a href="#myPartner" class="nav-list-dekstop">Clients</a>
+          <a href="#myBlog" class="nav-list-dekstop">Blog</a>
+          <a href="#contact" class="nav-list-dekstop">Contact</a>
+          <button class="flex items-center gap-1 dark:text-slate-300">
+            <span>Light</span>
+            <label for="checkboxDekstop">
+              <input type="checkbox" id="checkboxDekstop" class="hidden peer" />
+              <div
+                class="toggle-container w-10 h-5.5 rounded-full bg-slate-500 flex items-center px-1 cursor-pointer peer-checked:justify-end"
+              >
+                <div
+                  class="w-4.5 h-4.5 bg-white rounded-full pointer-events-none"
+                ></div>
+              </div>
+            </label>
+            <span>Dark</span>
+          </button>
+        </nav>
+
+        <button
+          id="btnMenu"
+          class="cursor-pointer md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <i
+            class="fa-solid fa-bars text-3xl pointer-events-none dark:text-white"
+          ></i>
+        </button>
+        <button id="btnClose" class="hidden cursor-pointer dark:text-white">
+          <i class="fa-solid fa-xmark text-3xl pointer-events-none"></i>
+        </button>
+      </div>
+
+      <nav
+        id="mobileMenu"
+        class="flex-col gap-2 text-slate-800 absolute shadow-2xl bg-white min-w-50 py-4 px-5 rounded-xl right-5 top-12 z-10 md:hidden dark:bg-slate-800 hidden"
+      >
+        <a href="#" class="nav-list-mobile">Beranda</a>
+        <a href="#aboutUs" class="nav-list-mobile">Tentang Saya</a>
+        <a href="#myProject" class="nav-list-mobile">Portofolio</a>
+        <a href="#myPartner" class="nav-list-mobile">Clients</a>
+        <a href="#myBlog" class="nav-list-mobile">Blog</a>
+        <a href="#contact" class="nav-list-mobile">Contact</a>
+        <button class="flex items-center gap-1 dark:text-slate-300">
+          <span>Light</span>
+          <label for="checkboxMobile">
+            <input type="checkbox" id="checkboxMobile" class="hidden peer" />
+            <div
+              class="toggle-container w-10 h-5.5 rounded-full bg-slate-500 flex items-center px-1 cursor-pointer peer-checked:justify-end"
+            >
+              <div
+                class="w-4.5 h-4.5 bg-white rounded-full pointer-events-none"
+              ></div>
+            </div>
+          </label>
+          <span>Dark</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="mt-8 py-3">
+      <section
+        class="hero px-5 md:px-10 lg:px-43 md:flex md:justify-between md:items-center md:mt-25"
+      >
+        <div class="md:max-w-sm">
+          <p class="text-sm text-sky-500 font-semibold mb-1 md:text-base">
+            Halo Semua 👋, saya
+          </p>
+          <h1
+            class="text-4xl font-bold text-slate-900 lg:text-5xl dark:text-white dark:text-shadow-md dark:text-shadow-sky-500"
+          >
+            Nanda Winanda
+          </h1>
+          <p
+            class="text-slate-700 text-sm mb-4 mt-2 md:text-lg dark:text-slate-500"
+          >
+            Student & <span class="font-bold dark:text-white">Gamer</span>
+          </p>
+          <p
+            class="mb-6 text-[0.8rem] text-slate-600 md:text-sm dark:text-slate-500"
+          >
+            Belajar web programming itu mudah dan menyenangkan bukan.
+            <b>bukan!</b>
+          </p>
+
+          <a
+            href="#"
+            class="bg-sky-400 max-w-fit py-2.5 px-6 rounded-full text-sm text-white font-bold hover:bg-sky-700 transition-colors duration-300 active:bg-sky-900"
+            >Hubungi Saya</a
+          >
+        </div>
+        <div class="flex justify-center relative mt-25 md:mt-0 lg:me-14">
+          <div class="bg-sky-400 w-65 h-50 lg:w-75 lg:h-60 rounded-full"></div>
+          <img
+            src="img/foto-profile.png"
+            alt="Foto Profil Nanda Winanda"
+            class="max-w-65 absolute lg:max-w-68 -top-15 md:-top-20"
+          />
+        </div>
+      </section>
+
+      <section
+        id="aboutUs"
+        class="mt-15 py-20 flex flex-col gap-2 px-5 md:px-10 md:flex-row md:gap-10 lg:px-40 md:items-center"
+      >
+        <div class="flex flex-col gap-2 md:flex-1 md:gap-2.5">
+          <h2 class="text-sky-500 font-bold">TENTANG SAYA</h2>
+          <h3 class="text-2xl font-bold md:text-3xl dark:text-white">
+            Yuk, belajar web programming di NW!
+          </h3>
+          <p class="text-slate-600 text-sm dark:text-slate-500">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa natus
+            excepturi quo eaque quam consequatur facere accusantium autem magnam
+            nulla.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 md:flex-1 md:gap-2.5">
+          <h3
+            class="font-semibold mt-3 mb-1.5 text-lg md:text-2xl dark:text-white"
+          >
+            Mari Berteman
+          </h3>
+          <p class="text-slate-600 text-sm dark:text-slate-500">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
+            exercitationem placeat rerum possimus iure consectetur molestiae
+            sapiente pariatur quis optio.
+          </p>
+          <ul class="flex gap-2 mt-1.5">
+            <li>
+              <a href="#" class="social-media-list"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-media-list"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-media-list"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-media-list"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-media-list"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-media-list"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="myProject"
+        class="flex flex-col items-center gap-10 bg-slate-100/90 py-15 px-5 md:px-10 dark:bg-slate-800"
+      >
+        <div class="flex flex-col items-center gap-2 md:max-w-lg">
+          <span class="sub-title">Portofolio</span>
+          <h2 class="section-title md:text-4xl dark:text-white">
+            Project Terbaru
+          </h2>
+          <p class="section-description md:text-base">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+            quidem?
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-5 lg:max-w-[70%]"
+        >
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="img/landing_page_real_madrid.jpeg"
+                alt="landing page real madrid"
+              />
+            </div>
+            <h3 class="card-title">Landing Page Real Madrid</h3>
+            <p class="card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+              autem?
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="img/css_grid.jpeg" alt="css grid" />
+            </div>
+            <h3 class="card-title">CSS Grid</h3>
+            <p class="card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+              autem?
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="img/landing_page_snap.jpeg" alt="landing page snap" />
+            </div>
+            <h3 class="card-title">Landing Page Snap</h3>
+            <p class="card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+              autem?
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="img/email_message.jpeg" alt="email message" />
+            </div>
+            <h3 class="card-title">Email Message</h3>
+            <p class="card-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+              autem?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="myPartner"
+        class="bg-slate-900 flex flex-col gap-5 items-center py-15 px-5 md:px-10 dark:bg-slate-300"
+      >
+        <div class="flex flex-col items-center gap-2 md:max-w-lg">
+          <span class="sub-title">Client</span>
+          <h2 class="section-title text-white text-center dark:text-black">
+            Yang Pernah Bekerjasama
+          </h2>
+          <p class="section-description text-slate-600/70">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam
+            assumenda explicabo vero!
+          </p>
+        </div>
+        <div
+          class="partner-list grid grid-cols-[130px_130px] justify-center gap-1.5 md:flex md:gap-8"
+        >
+          <div class="max-w-25 max-h-20 flex justify-center items-center">
+            <img src="img/google.png" alt="google logo" class="grayscale" />
+          </div>
+          <div class="max-w-25 max-h-20 flex justify-center items-center">
+            <img src="img/gojek.png" alt="gojek logo" class="grayscale" />
+          </div>
+          <div class="max-w-30 max-h-20 flex justify-center items-center">
+            <img
+              src="img/traveloka.png"
+              alt="traveloka logo"
+              class="grayscale"
+            />
+          </div>
+          <div class="max-w-25 max-h-20 flex justify-center items-center">
+            <img
+              src="img/tokopedia.png"
+              alt="tokopedia logo"
+              class="grayscale"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="myBlog"
+        class="py-15 px-5 md:flex md:flex-col md:items-center"
+      >
+        <div class="flex flex-col items-center gap-2 md:max-w-lg">
+          <span class="sub-title">Blog</span>
+          <h2 class="section-title">Tulisan Terkini</h2>
+          <p class="section-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+            esse ab voluptates laborum earum vel?
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 grid-rows-3 gap-5 mt-8 sm:grid-cols-2 sm:grid-rows-2 md:mt-10 lg:grid-cols-3 lg:grid-rows-1 lg:max-w-[75%]"
+        >
+          <article
+            class="rounded-lg shadow-xl overflow-hidden grid grid-rows-[minmax(0,200px)]"
+          >
+            <div class="card-header">
+              <img
+                src="img/belajar_pemrograman.jpeg"
+                alt="Tips Belajar Pemrograman"
+                class="min-w-full min-h-full"
+              />
+            </div>
+            <div
+              class="card-content flex flex-col gap-2 p-5 bg-white dark:bg-slate-700"
+            >
+              <h3 class="card-title dark:text-white dark:font-bold">
+                Tips Belajar Pemrograman
+              </h3>
+              <p class="card-description dark:text-slate-300">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
+                necessitatibus?
+              </p>
+              <a href="#" class="text-[0.8rem] underline dark:text-white"
+                >Baca Selengkapnya</a
+              >
+            </div>
+          </article>
+
+          <article
+            class="rounded-lg shadow-xl overflow-hidden grid grid-rows-[minmax(0,200px)]"
+          >
+            <div class="card-header">
+              <img
+                src="img/belajar_calculus.jpg"
+                alt="Tips Belajar Kalkulus"
+                class="min-w-full min-h-full"
+              />
+            </div>
+            <div
+              class="card-content flex flex-col gap-2 p-5 bg-white dark:bg-slate-700"
+            >
+              <h3 class="card-title dark:text-white dark:font-bold">
+                Tips Belajar Kalkulus
+              </h3>
+              <p class="card-description dark:text-slate-300">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
+                necessitatibus?
+              </p>
+              <a href="#" class="text-[0.8rem] underline dark:text-white"
+                >Baca Selengkapnya</a
+              >
+            </div>
+          </article>
+
+          <article
+            class="rounded-lg shadow-xl overflow-hidden grid grid-rows-[minmax(0,200px)]"
+          >
+            <div class="card-header">
+              <img
+                src="img/belajar_gaming.jpg"
+                alt="Tips Gaming"
+                class="min-w-full min-h-full"
+              />
+            </div>
+            <div
+              class="card-content flex flex-col gap-2 p-5 bg-white dark:bg-slate-700"
+            >
+              <h3 class="card-title dark:text-white dark:font-bold">
+                Tips Gaming
+              </h3>
+              <p class="card-description dark:text-slate-300">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
+                necessitatibus?
+              </p>
+              <a href="#" class="text-[0.8rem] underline dark:text-white"
+                >Baca Selengkapnya</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="px-5 py-15 dark:bg-slate-800">
+        <div class="flex flex-col gap-2 items-center mx-auto md:max-w-lg">
+          <span class="sub-title">Contact</span>
+          <h2 class="section-title">Hubungi Kami</h2>
+          <p class="section-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum,
+            molestias.
+          </p>
+        </div>
+        <div class="mt-12 md:px-10 lg:max-w-[60%] md:mx-auto">
+          <form id="formContactUs" class="flex flex-col gap-4">
+            <div class="input-container">
+              <label for="name" class="label">Nama</label>
+              <input type="text" id="name" name="name" class="input" required />
+            </div>
+
+            <div class="input-container">
+              <label for="email" class="label">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="input"
+                required
+              />
+            </div>
+
+            <div class="input-container">
+              <label for="message" class="label">Pesan</label>
+              <textarea name="message" id="message" class="input h-30">
+              </textarea>
+            </div>
+
+            <button
+              type="submit"
+              id="btnSend"
+              class="py-2.5 bg-sky-500 rounded-full text-white text-sm font-semibold cursor-pointer hover:bg-sky-600 active:bg-sky-700 md:w-[33%] md:mx-auto"
+            >
+              Kirim
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-900">
+      <div
+        class="flex flex-col gap-15 py-15 border-b border-b-slate-800 md:flex-row md:px-15 lg:px-55 lg:gap-20"
+      >
+        <div class="px-5">
+          <h2 class="text-white text-2xl font-bold mb-2.5 lg:text-3xl">NW</h2>
+          <p class="text-slate-400 text-lg font-bold mb-0.5">Hubungi Kami</p>
+          <p class="text-slate-500 text-sm">nwinanda201@gmail.com</p>
+          <address class="text-slate-500 text-sm not-italic">
+            Jl.Gatot Subroto <br />medan
+          </address>
+        </div>
+        <div class="px-5">
+          <h3 class="footer-h3">Kategori Tulisan</h3>
+          <ul class="footer-ul">
+            <li class="footer-li">
+              <a href="#">Programming</a>
+            </li>
+            <li class="footer-li">
+              <a href="#">Teknologi</a>
+            </li>
+            <li class="footer-li">
+              <a href="#">Gaya Hidup</a>
+            </li>
+          </ul>
+        </div>
+        <div class="px-5">
+          <h3 class="footer-h3">Tautan</h3>
+          <ul class="footer-ul">
+            <li class="footer-li"><a href="#">Beranda</a></li>
+            <li class="footer-li"><a href="#">Tentang Saya</a></li>
+            <li class="footer-li"><a href="#">Portofolio</a></li>
+            <li class="footer-li"><a href="#">Clients</a></li>
+            <li class="footer-li"><a href="#">Blog</a></li>
+            <li class="footer-li"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="py-8 px-5 flex flex-col items-center gap-4">
+        <div class="flex gap-2.5">
+          <a href="#" class="social-media-list text-white opacity-70"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="#" class="social-media-list text-white opacity-70"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="social-media-list text-white opacity-70"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a href="#" class="social-media-list text-white opacity-70"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+          <a href="#" class="social-media-list text-white opacity-70"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="#" class="social-media-list text-white opacity-70"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+        </div>
+        <p class="text-slate-700 text-sm text-center">
+          Dibuat dengan ❤️ oleh
+          <span class="text-sky-500">Nanda Winanda</span> menggunakan
+          <span class="text-blue-500">TailwindCSS 4.</span>
+        </p>
+      </div>
+    </footer>
+
+    <button
+      id="btnToTop"
+      class="text-white text-xl bg-sky-400 w-12 h-12 md:w-13 md:h-13 rounded-full fixed bottom-8 right-5 shadow-lg cursor-pointer opacity-0 transition-opacity duration-1000 lg:right-10 dark:bg-sky-900"
+    >
+      <i class="fa-solid fa-angle-up pointer-events-none"></i>
+    </button>
+  </body>
+</html>

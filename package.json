@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwind-scrollbar": "^4.0.2",
+    "tailwindcss": "^4.1.11"
+  },
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/style.css --watch"
+  }
+}
